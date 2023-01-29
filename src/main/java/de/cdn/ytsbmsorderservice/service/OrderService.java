@@ -3,6 +3,7 @@ package de.cdn.ytsbmsorderservice.service;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import de.cdn.ytsbmsorderservice.dto.OrderLineItemsDto;
 import de.cdn.ytsbmsorderservice.dto.OrderRequest;
 import de.cdn.ytsbmsorderservice.model.Order;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
     private final OrderRepository orderRepository;
 
